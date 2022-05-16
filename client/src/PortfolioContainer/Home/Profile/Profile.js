@@ -1,5 +1,6 @@
 import React from "react";
 import Typical from "react-typical";
+import ScrollService from "../../../utilities/ScrollService";
 import "./Profile.css";
 
 export default function Profile() {
@@ -17,18 +18,16 @@ export default function Profile() {
               </a>
             </div>
           </div>
-
           <div className="profile-details-name">
             <span className="primary-text">
-              {""}
-              Hello, I'm <span className="highlighted-text">Evan</span>
+              {" "}
+              Hello, I'M <span className="highlighted-text">Evan</span>
             </span>
           </div>
           <div className="profile-details-role">
             <span className="primary-text">
-              {""}
+              {" "}
               <h1>
-                {""}
                 <Typical
                   loop={Infinity}
                   steps={[
@@ -43,18 +42,22 @@ export default function Profile() {
                   ]}
                 />
               </h1>
-              <span className="profile-role-tagline">
-                Thinking technologies in relation to the human for the world of
-                tomorrow.
-              </span>
+            </span>
+            <span className="profile-role-tagline">
+              Thinking technologies in relation to the human for the world of
+              tomorrow.
             </span>
           </div>
+
           <div className="profile-options">
-            <button className="btn primary-btn">
-              {""}
-              Hire me{""}
+            <button
+              className="btn primary-btn"
+              onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+            >
+              {" "}
+              Contact me!{" "}
             </button>
-            <a href="JannotCV.pdf" download="Evan Jannot CV.pdf">
+            <a href="EvanJannotCV.pdf" download="Evan Jannot Resume.pdf">
               <button className="btn highlighted-btn">Get Resume</button>
             </a>
           </div>
